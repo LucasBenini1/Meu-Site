@@ -1,0 +1,218 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+/* Container que engloba esquerda e direita */
+.container{
+    display: flex;
+    gap: 1%;
+}
+/* Div esquerda que contem primeira, segunda e terceira div.*/
+.esquerda{
+    display: flex;
+    flex-direction: column;
+    width: 62%;
+}
+.first{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 44vh;
+    background-color: rgba(128, 128, 128, 0.3);
+    color: white;
+    box-shadow: 2px 2px 2px  rgba(255, 255, 255, 0.2);
+}
+.second{
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 6vh;
+    margin-top: 1%;
+    background-color: rgba(128, 128, 128, 0.3);
+    color: white;
+    box-shadow: 2px 2px 2px  rgba(255, 255, 255, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.third{ 
+    height: 46vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 1%;
+    background-color: rgba(128, 128, 128, 0.3);
+    color: white;
+    overflow: auto;
+    box-shadow: 2px 2px 2px  rgba(255, 255, 255, 0.2);
+}
+
+/* Div direita que contem quarta e quinta div.*/
+
+.direita{
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+}
+.forth{
+    height: 43vh;
+    height: 44vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: rgba(128, 128, 128, 0.3);
+    color: white;
+    box-shadow: 2px 2px 2px  rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+.alignForth{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fifth{
+    margin-top: 1%;
+    border-radius: 10px;
+    border: 1px solid black;
+    height: 54vh;
+    background-color: rgba(128, 128, 128, 0.3);
+    color: white;
+    box-shadow: 2px 2px 2px  rgba(255, 255, 255, 0.2);
+    overflow: auto;
+}
+/* Estilos dos titulos e paragrafos */
+.aboutTitle{
+    color: gray;
+    font-size: 20px;
+    margin: 35px 20px;
+}
+.aboutTitleProj{
+    color: gray;
+    font-size: 20px;
+    margin: 20px 20px;
+}
+.aboutText{
+    font-size: 16px;
+    margin: 35px 20px;
+}
+/* Icones das tecnologias */
+.icones{
+    width: 36px;
+    height: 36px;
+}
+.iconesG{
+    width: 32px;
+    height: 32px;
+}
+/* Lista de soft skills*/
+.softList{
+    height: 38vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+/* Div que contem a imagem do ultimo projeto r*/
+.image-container {
+    position: relative;
+    width: 50vh;
+  }
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 2px solid gray;
+}
+/* Texto que sobrepoe a imagem */
+.overlay {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); 
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 101%;
+}
+.overlay p{
+    font-size: 13px;
+    text-align: center;
+}
+.image-container:hover .overlay {
+    opacity: 1;
+    cursor: pointer;
+}
+.text {
+    font-size: 1em;
+    text-align: center;
+  }
+/* Media Querys */
+@media (max-width: 1000px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .direita,
+    .esquerda{
+        width: 100%;
+    }
+    .first,
+    .second,
+    .third,
+    .forth,
+    .fifth{
+        height: fit-content;
+        margin: 5px 0;
+    }
+}
+@media (min-width: 1600px){
+    .aboutTitle{
+        font-size: 34px;
+    }
+    .aboutText{
+        font-size: 21px;
+    }
+    .aboutTitleProj{
+        font-size: 34px;
+    }
+    .icones{
+        width: 45px;
+        height: 45px;
+    }
+    .iconesG{
+        width: 41px;
+        height: 41px;
+    }
+    li{
+        font-size: 21px;
+    }
+}
+
+/* Para navegadores Webkit (Chrome, Safari) */
+::-webkit-scrollbar {
+    width: 12px; /* Largura da scrollbar */
+}
+
+::-webkit-scrollbar-track {
+    background: #333; /* Cor do fundo da track da scrollbar (cinza escuro) */
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #666; /* Cor do polegar da scrollbar (cinza) */
+    border: 3px solid #333; /* Espaço ao redor do polegar */
+}
+
+/* Para Firefox */
+html {
+    scrollbar-width: thin; /* Largura da scrollbar */
+    scrollbar-color: #666 #333; /* Polegar da scrollbar e track */
+}

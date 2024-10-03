@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylesAbout.css">
+    <title>About me</title>
+</head>
+<body  class="poppins-regular">
+    <div class="container">
+    <div class="esquerda">
+        <div class="first">
+            <h3 class="aboutTitle">Sobre Mim</h3>
+            <h3 class="aboutText">Meu nome é Lucas Benini de Andrade, tenhos 21 anos e sou um desenvolvedor web FreeLancer. Moro em São Paulo, e
+                atualmente estou no último semestre da faculdade de Sistemas de Informação na Universidade Anhembi Morumbi. Tenho uma
+                rotina de estudo semanal, que é composta por cursos on-line e projetos onde posso desenvolver minhas habilidades e
+                me propor a desafios que farão a diferença no meu futuro como desenvolvedor.
+            </h3>
+        </div>
+        <div class="second">
+            <img src="img/html-5-svgrepo-com.svg" alt="HTML"  class="icones">
+            <img src="img/css-3-svgrepo-com.svg" alt="CSS"  class="icones">
+            <img src="img/javascript-svgrepo-com.svg" alt="JS"  class="iconesG">
+            <img src="img/react-svgrepo-com.svg" alt="react"  class="icones">
+            <img src="img/typescript-svgrepo-com.svg" alt="TS"  class="iconesG">
+            <img src="img/figma-svgrepo-com.svg" alt="Figma"  class="icones">
+            <img src="img/bootstrap-svgrepo-com.svg" alt="Bootstrap"  class="icones">
+        </div>
+        <div class="third">
+            <h3 class="aboutTitle">Certificados</h3>
+            <ul>
+                <li>
+                    HTML e CSS - Módulo de 40 horas: Mar/2023
+                </li>
+                <li>AWS Cloud Foundations – Curso de fundamentos de armazenamento em nuvem:
+                    Set/2022
+                </li>
+                <li>
+                    JavaScript - Módulo de 40 horas: Ago/2023 
+                </li>
+                <li>
+                    JavaScript - do Zero ao Master, Udemy - 14 horas – Abr/2024
+                </li>
+                <li>
+                    Discover - Curso de desenvolvimento de um projeto com HTML, CSS, JavaScript,
+                Figma, Git e Github: Set/2023
+                </li>
+                <li>
+                    TypeScript – Curso introdutório de 14 horas, Udemy – Jun/2024
+                </li>
+                <li>
+                    Inglês - 6 anos: Wize Up  (Nível Avançado c/ experiência)
+                </li>
+                <li>
+                    Eletrotécnica - Curso técnico integrado ao ensino médio: ETEC Getúlio Vargas: Fev 2018 - Dez 2020
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="direita">
+
+        <div class="forth">
+            <h3 class="aboutTitleProj">
+                Último projeto
+            </h3>
+
+            <div class="alignForth">
+
+            <div class="image-container">
+
+                <img src="img/lastProj.png" alt="Descrição da imagem">
+
+                <div class="overlay">
+                  <div class="text">Projeto 'Meu Portfólio'</div>
+                  <p>Projeto para divulgação de meu trabalho e meio de contato.</p>
+                </div><!--overlay-->
+                
+              </div><!--imgContainer-->
+
+            </div><!--AlignForth-->
+        </div><!--forth-->
+
+        <div class="fifth">
+            <h3 class="aboutTitle">Soft Skills</h3>
+            <ul class="softList">
+                <li>Comunicativo</li>
+                <li>Ágil</li>
+                <li>Atenção aos detalhes</li>
+                <li>Adaptabilidade</li>
+                <li>Criatividade</li>
+                <li>Trabalho em equipe</li>
+                <li>Resolução de problemas</li>
+                <li>Pensamento analítico</li>
+            </ul>
+        </div>
+    </div>
+
+
+    <script>
+    var overlays = document.getElementsByClassName("overlay");
+    for (var i = 0; i < overlays.length; i++) {
+      overlays[i].addEventListener("click", function() {
+        window.location.href = "index.html";
+      });
+    }
+    </script>
+
+</div><!--Container-->
+</body>
+</html>

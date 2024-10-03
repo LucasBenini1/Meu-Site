@@ -1,0 +1,706 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Samsung Sharp Sans', sans-serif;
+    background-color: black;
+    overflow-x: hidden;
+}
+#particles-js{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    z-index: 3;
+}
+/*-----Pagina Principal----*/
+
+.contentParticles{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Titulo principal */
+
+#title{
+    color: white;
+    font-size: 36px;
+    text-align: center;
+}
+#titleCity{
+    color: rgb(179, 177, 177);
+    text-align: center;
+}
+
+/* Efeito no Titulo Principal */
+.lanterna {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 0) 100px, rgba(0, 0, 0, 0.5) 150px);
+    pointer-events: none;
+    z-index: 2;
+  }
+  /* Div do menu hamb e da identificacao*/
+  #identification{
+    color: rgb(179, 177, 177);
+    display: flex;
+    position: absolute;
+    gap: 10px;
+    font-size: 8px;
+    align-items: center;
+    margin: 10px 10px;
+    justify-content: space-between;
+    width: 98%;
+  }
+
+  /* Texto interativo da primeira pagina */
+  #LBADEV{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  #idAge{
+    border-left: 3px solid #3366f3;
+    padding: 10px;
+    color: #3366f3;
+  }
+    /* Menu de Hamburguer*/
+
+  .menu-hamburguer {
+    width: 30px;
+    height: 25px;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .menu-hamburguer span {
+    background: #fff;
+    border-radius: 2px;
+    height: 3px;
+    transition: all 0.5s ease;
+    position: absolute;
+    width: 100%;
+  }
+  
+  .menu-hamburguer span:nth-child(1) {
+    top: 0;
+  }
+  
+  .menu-hamburguer span:nth-child(2) {
+    top: 11px;
+  }
+  
+  .menu-hamburguer span:nth-child(3) {
+    bottom: 0;
+  }
+  
+  .menu-hamburguer.active span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 11px;
+  }
+  
+  .menu-hamburguer.active span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  .menu-hamburguer.active span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 11px;
+  }
+  #menu-options {
+    margin-top: 0%;
+    position: absolute;
+    top: -400px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.6s;
+    z-index: 31;
+  }
+  .menuBtn {
+    text-decoration: none;
+    padding: 10px;
+    border: 1px solid #3366f3;
+    color: rgb(187, 187, 187);
+    font-size: 14px;
+    background-color: transparent;
+    border-radius: 4px 0px 0px 4px;
+    cursor: pointer;
+    margin: 5px 0;
+  }
+  .menuBtn:hover{
+    color: white;
+  }
+  #menu-options.active {
+    transform: translateY(450px); 
+  }
+
+  /* Div 'sobre este site' */
+
+  #aboutDiv{
+    color: gray;
+    border: none;
+    border-radius: 4px;
+    height: 0px;
+    width: 0px;
+    padding: 0;
+    transition: 1s;
+    background-color: black;
+  }
+  #aboutDiv.active{
+    display: block;
+    height: 150px;
+    width: 400px;
+    padding: 5px;
+    border: 1px solid gray;
+  }
+  .footerText{
+    display: none;
+  }
+  .footerText.active{
+    display: block;
+  }
+  /*-----Titulos , paragrafos e fundo-----*/
+  .bellowContent{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+  }
+  .bellowTitles{
+    color: rgb(179, 177, 177);
+    margin: 10% 8%;
+  }
+  .bellowPara{
+    color: rgb(179, 177, 177);
+    font-size: 18px;
+    margin: 5% 10%;
+  }
+
+  /*-----MOCKUPS-----*/
+
+  .informacoes-Site{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    gap: 10px;
+  }
+  .demaisMockups{
+    display: flex;
+    flex-wrap: wrap;
+    width: 50%;
+  }
+  .mockup{
+    color: white;
+    width: 180px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 4px;
+    border: 1px solid white;
+    background-color:  #3366f3;
+  }
+  .mockup:hover{
+    filter: brightness(0.9);
+  }
+  #responsive{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    border: 1px solid white;
+    justify-content: space-evenly;
+    height: 280px;
+    width: 300px;
+    color: white;
+    background-color:  #3366f3;
+    border-radius: 4px
+  }
+  #responsive:hover{
+    filter: brightness(0.9);
+  }
+
+  /* Icones do mockup */
+
+  .iconSite{
+    transition: 1s;
+  }
+  .iconSite.show{
+    transform: translateY(-10px) rotate(360deg);
+  }
+  #pointer{
+    width: 74px;
+    height: 74px;
+  }
+  #notebook{
+    width: 210px;
+    height: 130px;
+  }
+  .rotate-icons{
+    transition: 0.7s;
+  }
+  .rotate-icons.show{
+    transform: translateY(-10px) rotate(-25deg);
+  }
+
+  /*----Templates----*/
+
+  .templateTitleDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    margin-top: 100px;
+  }
+  #inspire-template{
+    color: rgb(179, 177, 177);
+    font-size: 12px;
+  }
+  .templatesTitle{
+    color:  #3366f3;
+    text-align: center;
+    font-size: 26px;
+  }
+  .templatesImg{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 50px;
+  }
+  .template{
+    color: white;
+    border-radius: 4px;
+    height: 300px;
+    width: 350px !important;
+  }
+  .template:hover{
+    transform: scale(1.02);
+  }
+  /* Botao do orcamento */
+  #wppContainer{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
+  .whatsapp-button{
+    text-decoration: none;
+    color: white;
+    background-color: #3366f3;
+    border-radius: 8px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.6s;
+    border: 1px solid #3366f3;
+  }
+  .whatsapp-button:hover{
+    border: 1px solid #3366f3;
+    background-color: transparent;
+  }
+
+  /* Aba de Vantagens */
+
+   .lastDiv{
+    display: flex;
+    flex-direction: column;
+  }
+  .vantagens{
+    display: flex;
+    flex-wrap: wrap !important;  
+  }
+  .vantClassDiv{
+    border: 1px solid gray;
+    border-radius: 6px;
+    width: 25%;
+  }
+
+
+  #vantTitle{
+    color: gray;
+    font-size: 17px;
+    margin: 10px 50px;
+  }
+
+
+  /*Footer*/
+  .footer{
+    margin-top: 10px;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    background-color: gray;
+    padding: 7px;
+  }
+  .footer a{
+    text-decoration: none;
+    color: black;
+  }
+
+  /* Media Querys*/
+  @media (max-width: 349px){ /*Celulares pequenos */
+    .informacoes-Site{
+      flex-direction: column;
+      margin: 0;
+    }
+    .demaisMockups{
+      width: 100%;
+    }
+    .mockup{
+      width: 100%;
+    }
+    #responsive{
+      width: 100%;
+    }
+    #LBADEV{
+      max-width: 80%;
+    }
+    #menu-options{
+      width: 90%;
+      z-index: 30;
+      top: -380px;
+      text-align: center;
+    }
+    .menuBtn{
+      background-color: #3366f3;
+      color: white;
+      border-radius: 4px;
+    }
+    #aboutDiv.active{
+      width: 100%;
+      border-radius: 4px;
+    }
+    .template{
+      width: 200px;
+      height: 230px;
+    }
+    #identification{
+      font-size: 7px;
+      gap: 0;
+    }
+    #finalText{
+      font-size: 11px;
+    }
+    .lastDiv .bellowPara{
+      font-size: 15px;
+    }
+    .vantagens{
+      flex-direction: column;
+    }
+    .vantClassDiv{
+      width: 100%;
+    }
+  }
+
+  @media (min-width: 350px) and (max-width: 500px){ /* Celulares */
+    body{
+      hyphens: auto;
+    }
+    .informacoes-Site{
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin: 100px 0;
+      gap: 0;
+    }
+    #responsive{
+      width: 360px;
+    }
+    #createOwn{
+      margin-top: 70px;
+    }
+    .bellowTitles{
+      margin-top: 14%;
+    }
+    .demaisMockups{
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0;
+      width: 100%;
+    }
+    #wppContainer{
+      margin: 80px 50px;
+    }
+    #wppContainer a{
+      padding: 12px;
+      font-size: 16px;
+    }
+    .templateTitleDiv{
+      margin-top: 90px;
+    }
+    #LBADEV{
+      max-width: 80%;
+    }
+    #menu-options{
+      width: 90%;
+      z-index: 30;
+      top: -380px;
+      text-align: center;
+    }
+    .menuBtn{
+      background-color: #3366f3;
+      color: white;
+      border-radius: 4px;
+    }
+    #aboutDiv.active{
+      width: 100%;
+      border-radius: 4px;
+    }
+    .template{
+      width: 450px !important;
+      height: 450px !important;
+    }
+    #identification{
+      font-size: 7px;
+      gap: 0;
+    }
+    #finalText{
+      font-size: 11px;
+    }
+    .lastDiv .bellowPara{
+      font-size: 17px;
+    }
+    .vantagens{
+      flex-direction: column;
+    }
+    .vantClassDiv{
+      width: 100%;
+    }
+  }
+  @media (min-width: 501px) and (max-width: 800px){ /*Celulares maiores*/
+    .informacoes-Site{
+      width: 100%;
+      margin: 0;
+    }
+    #responsive{
+      width: 360px;
+    }
+    .demaisMockups{
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+    }
+    .vantagens{
+      flex-direction: column;
+    }
+    .vantClassDiv{
+      width: 100%;
+    }
+
+  }
+
+  @media (min-width: 701px) and (max-width: 1367px) and (orientation: portrait){  /*Tablets*/
+    body{
+      hyphens: auto;
+      text-align: justify;
+    }
+    #menu-options{
+      z-index: 30;
+      top: -380px;
+      text-align: center;
+    }
+    .menuBtn{
+      background-color: #3366f3;
+      color: white;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    .informacoes-Site{
+      margin-left: 5%;
+    }
+    #responsive{
+      height: 420px;
+      width: 250px;
+    }
+    .whatsapp-button{
+      padding: 12px;
+      font-size: 18px;
+    }
+    .vantagens{
+      flex-direction: column;
+    }
+    .vantClassDiv{
+      width: 100%;
+    }
+  }
+  
+  @media (min-width: 1100px) and (max-width: 1300px) and (orientation: landscape){ /* Notebooks */
+    #responsive{
+      height: 280px;
+    }
+    .demaisMockups{
+      width: 60%;
+    }
+  }
+
+  @media (min-width: 1460px) and (max-width: 2200px){
+    .demaisMockups{
+      width: 40%;
+    }
+    #LBADEV{
+      font-size: 10px;
+    }
+    #title{
+      font-size: 52px;
+    }
+    #titleCity{
+      font-size: 28px;
+    }
+    .lanterna{
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0) 150px, rgba(0, 0, 0, 0.5) 225px);
+    }
+    .bellowTitles{
+      font-size: 48px;
+    }
+    .bellowPara{
+      font-size: 28px;
+    }
+    .mockup{
+      height: 200px;
+      width: 200px;
+      font-size: 20px;
+    }
+    #responsive{
+      height: 400px;
+      font-size: 20px;
+    }
+    .iconSite{
+      width: 52px;
+      height: 52px;
+    }
+    .rotate-icons{
+      width: 60px;
+      height: 60px;
+    }
+    #pointer{
+      width: 80px;
+      height: 80px;
+    }
+    #menu-options{
+      width: 30%;
+    }
+    .menuBtn{
+      padding: 10px;
+      font-size: 18px;
+    }
+    #aboutDiv{
+      width: 100% !important;
+      font-size: 18px;
+    }
+  }
+
+/* Estilos para os botos de controle do Tiny Slider*/
+
+/* Estilo para o contêiner de navegação */
+.tns-nav {
+  display: flex; 
+  justify-content: center; 
+  margin-top: 10px; 
+  list-style: none; 
+  padding: 0;
+}
+
+/* Estilo para cada ponto de navegação */
+.tns-nav button {
+  width: 10px; 
+  height: 10px; 
+  border-radius: 50%; 
+  background-color: #ccc; 
+  margin: 0 5px; 
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+/* Estilo para o ponto de navegação ativo */
+.tns-nav button.tns-nav-active {
+  background-color: #3366f3; 
+}
+
+/* Estilo básico para os botões de controle */
+.tns-controls {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none; 
+}
+
+.tns-controls button {
+  background-color: #3366f3;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  pointer-events: auto;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.tns-controls button:hover {
+  opacity: 1;
+}
+
+.tns-controls button:focus {
+  outline: none;
+}
+
+/* Estilo para os botões de controle específicos */
+.tns-controls button[data-controls="prev"] {
+  left: 10px;
+}
+
+.tns-controls button[data-controls="next"] {
+  right: 10px;
+}
+
+
+
+/*
+Efeito ao descer a pagina
+*/
+
+.element {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+.element.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.elementLeft {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+.elementLeft.show {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.elementRight {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 1s ease-out, transform 0.6s ease-out;
+}
+
+.elementRight.show {
+  opacity: 1;
+  transform: translateX(0);
+}
